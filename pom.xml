@@ -83,4 +83,5 @@
 		<module>microservice-user-provider-hystrix-1005</module>
 		<module>microservice-user-consumer-hystrix-turbine-91</module>
 	</modules>
+	
 </project>
