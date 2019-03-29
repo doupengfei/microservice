@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "server.servlet.eureka",
+    "type": "java.lang.String",
+    "description": "A description for 'server.servlet.eureka'"
+  },
+  {
+    "name": "server.client",
+    "type": "java.lang.String",
+    "description": "A description for 'server.client'"
+  }
+]}

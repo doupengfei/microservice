@@ -1,0 +1,41 @@
+server:
+  port: 1004
+spring: 
+    application:
+      name: MICROSERVICE-USER
+    datasource: 
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      url: jdbc:sqlserver://192.168.0.5:1433;DatabaseName=practice;autoReconnect=true;useLOBs=false
+      username: sa
+      password: aaa
+mybatis: 
+    typeAliasesPackage: com.dpf.beans
+    mapper-locations: classpath:com/dpf/**/mapper/*.xml 
+eureka:
+  instance:
+    hostname: localhost  #eureka客户端主机实例名称
+    appname: microservice-user  #客户端服务名
+    instance-id: microservice-user-hystrix:1004 #客户端实例名称
+    prefer-ip-address: true #显示IP
+  client: 
+    service-url: 
+        # 单机 defaultZone: http://localhost:2001/eureka   #把服务注册到eureka注册中心
+      defaultZone: http://eureka2001.dpf.com:2001/eureka/,http://eureka2002.dpf.com:2002/eureka/,http://eureka2003.dpf.com:2003/eureka/ # 集群
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000 #设置hystrix的服务超时时间，默认1s
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream # 或者'*'
+info: 
+   groupId: com.dpf
+   artifactId: microservice-user-provider-hystrix-1004
+   version: 0.0.1-SNAPSHOT
+   负责人: 张三
+   联系电话: 110  
