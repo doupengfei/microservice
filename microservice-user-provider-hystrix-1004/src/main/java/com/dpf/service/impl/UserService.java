@@ -1,6 +1,8 @@
 package com.dpf.service.impl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,6 +43,14 @@ public class UserService implements IUserService {
 	public Users loadUsersById(Integer userId) {
 		// TODO Auto-generated method stub
 		return userMapper.loadUsersById(userId);
+	}
+
+	@Override
+	public Map<String, Object> getInfo() {
+		 Map<String,Object> map=new HashMap<String,Object>();
+		    map.put("code", 200);
+		    map.put("info", "业务数据xxxxx-1004");
+		    return map;
 	}
  
 }
