@@ -28,12 +28,12 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 2000 #设置hystrix的服务超时时间，默认1s
-management:
-  endpoints:
-    web:
-      exposure:
+management: 
+  endpoints: 
+    web: 
+      exposure: 
         include: hystrix.stream # 或者'*'
-info: 
+info:  
    groupId: $project.groupId$
    artifactId: $project.artifactId$
    version: $project.version$
