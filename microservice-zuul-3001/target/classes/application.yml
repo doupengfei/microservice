@@ -1,0 +1,24 @@
+server: 
+  port: 3001  servlet:     context-path: /
+spring:  
+  application: 
+    name: microservice-zuul
+eureka: 
+  instance: 
+    instance-id: microservice-zuul:3001 #客户端实例名称
+    prefer-ip-address: true #显示IP
+  client: 
+    service-url: 
+      defaultZone: http://eureka2001.dpf.com:2001/eureka/,http://eureka2002.dpf.com:2002/eureka/,http://eureka2003.dpf.com:2003/eureka/ # 集群
+info: 
+   groupId: com.dpf
+   artifactId: microservice-zuul-3001
+   version: 0.0.1-SNAPSHOT
+   负责人: 王五
+   联系电话: 110
+zuul: 
+  prefix: /dpf
+  ignored-services: "*"
+  routes: 
+    studentServer.serviceId: microservice-user
+    studentServer.path: /userServer/**
