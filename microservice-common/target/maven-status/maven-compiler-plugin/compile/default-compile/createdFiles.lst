@@ -1,2 +1,4 @@
+com\dpf\service\UserClientFallbackFactory$1.class
 com\dpf\service\UserClientService.class
+com\dpf\service\UserClientFallbackFactory.class
 com\dpf\beans\Users.class
