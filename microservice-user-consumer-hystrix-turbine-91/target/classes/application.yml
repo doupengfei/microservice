@@ -5,7 +5,7 @@ eureka:
     service-url:
       defaultZone: http://eureka2001.dpf.com:2001/eureka/,http://eureka2002.dpf.com:2002/eureka/,http://eureka2003.dpf.com:2003/eureka/ # 集群
 turbine:
-  app-config: microservice-student   # 指定要监控的应用名称
+  app-config: microservice-user   # 指定要监控的应用名称
   clusterNameExpression: "'default'" #表示集群的名字为default
 spring:
   application:
