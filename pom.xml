@@ -82,6 +82,7 @@
 		<module>microservice-user-consumer-hystrix-dashboard-90</module>
 		<module>microservice-user-provider-hystrix-1005</module>
 		<module>microservice-user-consumer-hystrix-turbine-91</module>
+		<module>microservice-zuul-3001</module>
 	</modules>
 	
 </project>
